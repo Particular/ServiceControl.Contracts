@@ -5,17 +5,12 @@
     /// <summary>
     /// Event emitted when ServiceControl detects lack of heartbeat from one of monitored endpoints.
     /// </summary>
-    public class HeartbeatStopped
+    public class HeartbeatRestored
     {
         /// <summary>
-        /// The date and time last hearbeat has been received from the endpoint.
+        /// The date and time the heartbeat been again detected by ServiceControl.
         /// </summary>
-        public DateTime LastReceivedAt { get; set; }
-
-        /// <summary>
-        /// The date and time the lack of heartbeat been detected by ServiceControl.
-        /// </summary>
-        public DateTime DetectedAt { get; set; }
+        public DateTime RestoredAt { get; set; }
 
         /// <summary>
         /// The name of the endpoint
