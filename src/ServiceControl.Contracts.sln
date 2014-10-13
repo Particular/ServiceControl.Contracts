@@ -1,13 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl.Contracts", "ServiceControl.Contracts\ServiceControl.Contracts.csproj", "{C87266FD-71B4-420C-8345-06A7E960C609}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{975F73C1-BEFC-4C25-9390-58B300091A00}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{83E2160F-80A2-405B-98A6-5B63451B4AE3}"
+	ProjectSection(SolutionItems) = preProject
+		..\packaging\nuget\ServiceControl.Contracts.nuspec = ..\packaging\nuget\ServiceControl.Contracts.nuspec
 	EndProjectSection
 EndProject
 Global
