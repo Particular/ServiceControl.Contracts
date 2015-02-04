@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomCheckFailed.cs" />
+    <Compile Include="CustomCheckSucceeded.cs" />
     <Compile Include="HeartbeatRestored.cs" />
     <Compile Include="HeartbeatStopped.cs" />
     <Compile Include="MessageFailed.cs" />
