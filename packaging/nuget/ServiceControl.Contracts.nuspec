@@ -2,7 +2,7 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>ServiceControl.Contracts</id>
-    <title>Contracts for the events pushed by ServiceContol</title>
+    <title>Contracts for the events pushed by ServiceControl</title>
     <version>$version$</version>
     <authors>NServiceBus Ltd</authors>
     <owners>Udi Dahan, Andreas Ohlund, John Simons</owners>
