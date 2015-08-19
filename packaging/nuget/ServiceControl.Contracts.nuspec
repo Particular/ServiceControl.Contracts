@@ -16,6 +16,6 @@
     <tags>nservicebus servicebus msmq cqrs publish subscribe</tags>
   </metadata>
   <files>
-    <file src="..\..\src\ServiceControl.Contracts\bin\Release\ServiceControl.Contracts.???" target="lib\net45" />
+    <file src="..\..\src\ServiceControl.Contracts\bin\Release\ServiceControl.Contracts.???" target="lib\net40" />
   </files>
 </package>
