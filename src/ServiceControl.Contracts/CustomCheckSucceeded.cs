@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// Event emited when a custom check passes. 
+    /// Event emited when a custom check passes.
     /// </summary>
     public class CustomCheckSucceeded
     {
