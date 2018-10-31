@@ -45,7 +45,7 @@
         public FailureInfo FailureDetails { get; set; }
 
         /// <summary>
-        /// Details about the message itself
+        /// Details about the message itself.
         /// </summary>
         public Message MessageDetails { get; set; }
 
