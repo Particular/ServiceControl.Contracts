@@ -58,10 +58,12 @@
             /// Message has been archived
             /// </summary>
             ArchivedFailure,
+
             /// <summary>
             /// Message has failed
             /// </summary>
             Failed,
+
             /// <summary>
             /// Message had failed, was retried and has failed again
             /// </summary>
