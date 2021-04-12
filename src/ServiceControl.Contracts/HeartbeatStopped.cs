@@ -8,7 +8,7 @@
     public class HeartbeatStopped
     {
         /// <summary>
-        /// The date and time last hearbeat has been received from the endpoint.
+        /// The date and time last heartbeat has been received from the endpoint.
         /// </summary>
         public DateTime LastReceivedAt { get; set; }
 

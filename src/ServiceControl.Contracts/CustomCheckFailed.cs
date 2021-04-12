@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// Event emited when a custom check fails.
+    /// Event emitted when a custom check fails.
     /// </summary>
     public class CustomCheckFailed
     {

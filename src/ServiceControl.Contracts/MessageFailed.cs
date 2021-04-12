@@ -3,9 +3,8 @@
     using System;
     using System.Collections.Generic;
 
-
     /// <summary>
-    /// Event emited for each message that ServiceControl detects as failed
+    /// Event emitted for each message that ServiceControl detects as failed
     /// </summary>
     public class MessageFailed
     {
@@ -25,7 +24,7 @@
         public int NumberOfProcessingAttempts { get; set; }
 
         /// <summary>
-        /// Status of the falied message
+        /// Status of the failed message
         /// </summary>
         public MessageStatus Status { get; set; }
 
@@ -71,7 +70,7 @@
         }
 
         /// <summary>
-        /// Emdpoint specific details
+        /// Endpoint specific details
         /// </summary>
         public class Endpoint
         {
@@ -143,7 +142,7 @@
             public class ExceptionInfo
             {
                 /// <summary>
-                /// The CLR type of rhe exception
+                /// The CLR type of the exception
                 /// </summary>
                 public string ExceptionType { get; set; }
 
