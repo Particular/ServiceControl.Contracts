@@ -1,0 +1,110 @@
+namespace ServiceControl.Contracts
+{
+    public class CustomCheckFailed
+    {
+        public CustomCheckFailed() { }
+        public string Category { get; set; }
+        public string CustomCheckId { get; set; }
+        public string EndpointName { get; set; }
+        public System.DateTime FailedAt { get; set; }
+        public string FailureReason { get; set; }
+        public string Host { get; set; }
+        public System.Guid HostId { get; set; }
+    }
+    public class CustomCheckSucceeded
+    {
+        public CustomCheckSucceeded() { }
+        public string Category { get; set; }
+        public string CustomCheckId { get; set; }
+        public string EndpointName { get; set; }
+        public string Host { get; set; }
+        public System.Guid HostId { get; set; }
+        public System.DateTime SucceededAt { get; set; }
+    }
+    public class FailedMessagesArchived
+    {
+        public FailedMessagesArchived() { }
+        public string[] FailedMessagesIds { get; set; }
+    }
+    public class FailedMessagesUnArchived
+    {
+        public FailedMessagesUnArchived() { }
+        public string[] FailedMessagesIds { get; set; }
+    }
+    public class HeartbeatRestored
+    {
+        public HeartbeatRestored() { }
+        public string EndpointName { get; set; }
+        public string Host { get; set; }
+        public System.Guid HostId { get; set; }
+        public System.DateTime RestoredAt { get; set; }
+    }
+    public class HeartbeatStopped
+    {
+        public HeartbeatStopped() { }
+        public System.DateTime DetectedAt { get; set; }
+        public string EndpointName { get; set; }
+        public string Host { get; set; }
+        public System.Guid HostId { get; set; }
+        public System.DateTime LastReceivedAt { get; set; }
+    }
+    public class MessageFailed
+    {
+        public MessageFailed() { }
+        public string FailedMessageId { get; set; }
+        public ServiceControl.Contracts.MessageFailed.FailureInfo FailureDetails { get; set; }
+        public ServiceControl.Contracts.MessageFailed.Message MessageDetails { get; set; }
+        public string MessageType { get; set; }
+        public int NumberOfProcessingAttempts { get; set; }
+        public ServiceControl.Contracts.MessageFailed.Endpoint ProcessingEndpoint { get; set; }
+        public ServiceControl.Contracts.MessageFailed.Endpoint SendingEndpoint { get; set; }
+        public ServiceControl.Contracts.MessageFailed.MessageStatus Status { get; set; }
+        public class Endpoint
+        {
+            public Endpoint() { }
+            public string Host { get; set; }
+            public System.Guid HostId { get; set; }
+            public string Name { get; set; }
+        }
+        public class FailureInfo
+        {
+            public FailureInfo() { }
+            public string AddressOfFailingEndpoint { get; set; }
+            public ServiceControl.Contracts.MessageFailed.FailureInfo.ExceptionInfo Exception { get; set; }
+            public System.DateTime TimeOfFailure { get; set; }
+            public class ExceptionInfo
+            {
+                public ExceptionInfo() { }
+                public string ExceptionType { get; set; }
+                public string Message { get; set; }
+                public string Source { get; set; }
+                public string StackTrace { get; set; }
+            }
+        }
+        public class Message
+        {
+            public Message() { }
+            public string Body { get; set; }
+            public string ContentType { get; set; }
+            public System.Collections.Generic.Dictionary<string, string> Headers { get; set; }
+            public string MessageId { get; set; }
+        }
+        public enum MessageStatus
+        {
+            ArchivedFailure = 0,
+            Failed = 1,
+            RepeatedFailure = 2,
+        }
+    }
+    public class MessageFailureResolvedByRetry
+    {
+        public MessageFailureResolvedByRetry() { }
+        public string[] AlternativeFailedMessageIds { get; set; }
+        public string FailedMessageId { get; set; }
+    }
+    public class MessageFailureResolvedManually
+    {
+        public MessageFailureResolvedManually() { }
+        public string FailedMessageId { get; set; }
+    }
+}
