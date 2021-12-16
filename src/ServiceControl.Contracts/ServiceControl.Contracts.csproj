@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net461;netcoreapp3.1</TargetFrameworks>
     <Description>Message contracts for external events pushed by ServiceControl</Description>
 	<SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\ServiceControl.Contracts.snk</AssemblyOriginatorKeyFile>
