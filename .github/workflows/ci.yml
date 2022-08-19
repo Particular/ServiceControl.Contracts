@@ -40,5 +40,4 @@ jobs:
           name: NuGet packages
           path: nugets/
           retention-days: 7
-      - name: Run tests
-        uses: Particular/run-tests-action@v1.3.0
+      # No unit tests in project, no need for "Run tests" step
