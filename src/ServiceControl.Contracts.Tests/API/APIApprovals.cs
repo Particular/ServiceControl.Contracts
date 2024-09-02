@@ -1,9 +1,8 @@
-﻿namespace NServiceBus.PlatformConnection.UnitTests.API
+﻿namespace ServiceControl.Contracts.Tests.API
 {
     using NUnit.Framework;
     using Particular.Approvals;
     using PublicApiGenerator;
-    using ServiceControl.Contracts;
 
     [TestFixture]
     class APIApprovals
