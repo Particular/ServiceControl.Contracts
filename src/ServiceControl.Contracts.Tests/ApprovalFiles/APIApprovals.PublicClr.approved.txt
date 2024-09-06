@@ -1,6 +1,6 @@
 namespace ServiceControl.Contracts
 {
-    public class CustomCheckFailed
+    public class CustomCheckFailed : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public CustomCheckFailed() { }
         public string Category { get; set; }
@@ -11,7 +11,7 @@ namespace ServiceControl.Contracts
         public string Host { get; set; }
         public System.Guid HostId { get; set; }
     }
-    public class CustomCheckSucceeded
+    public class CustomCheckSucceeded : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public CustomCheckSucceeded() { }
         public string Category { get; set; }
@@ -21,17 +21,17 @@ namespace ServiceControl.Contracts
         public System.Guid HostId { get; set; }
         public System.DateTime SucceededAt { get; set; }
     }
-    public class FailedMessagesArchived
+    public class FailedMessagesArchived : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public FailedMessagesArchived() { }
         public string[] FailedMessagesIds { get; set; }
     }
-    public class FailedMessagesUnArchived
+    public class FailedMessagesUnArchived : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public FailedMessagesUnArchived() { }
         public string[] FailedMessagesIds { get; set; }
     }
-    public class HeartbeatRestored
+    public class HeartbeatRestored : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public HeartbeatRestored() { }
         public string EndpointName { get; set; }
@@ -39,7 +39,7 @@ namespace ServiceControl.Contracts
         public System.Guid HostId { get; set; }
         public System.DateTime RestoredAt { get; set; }
     }
-    public class HeartbeatStopped
+    public class HeartbeatStopped : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public HeartbeatStopped() { }
         public System.DateTime DetectedAt { get; set; }
@@ -48,7 +48,7 @@ namespace ServiceControl.Contracts
         public System.Guid HostId { get; set; }
         public System.DateTime LastReceivedAt { get; set; }
     }
-    public class MessageFailed
+    public class MessageFailed : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public MessageFailed() { }
         public string FailedMessageId { get; set; }
@@ -96,13 +96,13 @@ namespace ServiceControl.Contracts
             RepeatedFailure = 2,
         }
     }
-    public class MessageFailureResolvedByRetry
+    public class MessageFailureResolvedByRetry : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public MessageFailureResolvedByRetry() { }
         public string[] AlternativeFailedMessageIds { get; set; }
         public string FailedMessageId { get; set; }
     }
-    public class MessageFailureResolvedManually
+    public class MessageFailureResolvedManually : NServiceBus.IEvent, NServiceBus.IMessage
     {
         public MessageFailureResolvedManually() { }
         public string FailedMessageId { get; set; }
