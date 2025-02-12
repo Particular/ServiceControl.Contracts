@@ -1,0 +1,7 @@
+ignore:
+  # Does not use the NServiceBus signing key
+  - test: ProjectsShouldBeSignedWithCorrectKey
+    path: src/ServiceControl.Contracts/ServiceControl.Contracts.csproj
+  # Older branch uses targets that predate LTS/STS versions
+  - test: ComponentShouldTargetDotNetLtsVersion
+    path: src/ServiceControl.Contracts/ServiceControl.Contracts.csproj
