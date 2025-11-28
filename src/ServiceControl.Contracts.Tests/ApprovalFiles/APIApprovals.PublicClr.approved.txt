@@ -48,6 +48,11 @@ namespace ServiceControl.Contracts
         public System.Guid HostId { get; set; }
         public System.DateTime LastReceivedAt { get; set; }
     }
+    public class MessageEditedAndRetried
+    {
+        public MessageEditedAndRetried() { }
+        public string FailedMessageId { get; set; }
+    }
     public class MessageFailed
     {
         public MessageFailed() { }
