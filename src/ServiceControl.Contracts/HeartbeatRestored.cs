@@ -1,11 +1,12 @@
 ﻿namespace ServiceControl.Contracts
 {
     using System;
+    using NServiceBus;
 
     /// <summary>
     /// Event emitted when ServiceControl detects lack of heartbeat from one of monitored endpoints.
     /// </summary>
-    public class HeartbeatRestored
+    public class HeartbeatRestored : IEvent
     {
         /// <summary>
         /// The date and time the heartbeat been again detected by ServiceControl.

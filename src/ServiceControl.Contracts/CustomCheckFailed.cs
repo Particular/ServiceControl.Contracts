@@ -1,11 +1,12 @@
 ﻿namespace ServiceControl.Contracts
 {
     using System;
+    using NServiceBus;
 
     /// <summary>
     /// Event emitted when a custom check fails.
     /// </summary>
-    public class CustomCheckFailed
+    public class CustomCheckFailed : IEvent
     {
         /// <summary>
         /// The id for the custom check provided by the user.
